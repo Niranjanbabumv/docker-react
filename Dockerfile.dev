@@ -1,0 +1,11 @@
+#Create OS
+FROM node:alpine
+#set working directory
+WORKDIR "./app"
+
+COPY package.json .
+RUN npm install
+COPY . .
+
+#run the project
+CMD ["npm","run","start"]
