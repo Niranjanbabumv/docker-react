@@ -2,7 +2,7 @@ sudo: required
 services:
     - docker
 before_install:
-    - docker build -t niranjan/docker-react -f Dockerfile .
+    - docker build -t niranjan/docker-react -f Dockerfile.dev .
 script:
     - docker run niranjan/docker-react npm run test -- --coverage
 deploy:
@@ -15,7 +15,6 @@ deploy:
         on:
           branch: master
         access_key_id: $AWS_ACCESS_KEY
-        secret_access_key:
-                secure: "$AWS_SECRETE_KEY"
+        secret_access_key: $AWS_SECRETE_KEY
 
 
