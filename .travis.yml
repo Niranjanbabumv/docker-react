@@ -5,3 +5,17 @@ before_install:
     - docker build -t niranjan/docker-react -f Dockerfile.dev .
 script:
     - docker run niranjan/docker-react npm run test -- --coverage
+deploy:
+        provider: elasticbeanstalk
+        region: "us-east-1"
+        app: "Docker"
+        env: "Docker-env"
+        bucket_name: "elasticbeanstalk-us-east-1-002768222163"
+        bucket_path: "Docker"
+        on:
+          branch: master
+        access_key_id: $AWS_ACCESS_KEY
+        secret_access_key:
+                secure: "$AWS_SECRETE_KEY"
+
+
