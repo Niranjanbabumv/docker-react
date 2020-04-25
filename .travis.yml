@@ -6,13 +6,12 @@ before_install:
 script:
     - docker run niranjan/docker-react npm run test -- --coverage
 deploy:
-        provider: elasticbeanstalk
-        region: "us-east-1"
-        app: "Docker"
-        env: "Docker-env"
-        bucket_name: "elasticbeanstalk-us-east-1-002768222163"
-        bucket_path: "Docker"
+        provider: bluemixcloudfoundry
+        skip_cleanup: true
+        manifest: manifest.yml
+        username: $BLUEMIX_USER
+        password: $BLUEMIX_PASSWORD
+        organization: $BLUEMIX_ORGANIZATION
+        space: $BLUEMIX_SPACE
         on:
           branch: master
-        access_key_id: $AWS_ACCESS_KEY
-        secret_access_key: $AWS_SECRETE_KEY
