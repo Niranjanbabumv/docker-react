@@ -8,9 +8,9 @@ script:
 deploy:
    edge: true
    provider: bluemixcloudfoundry
-   username: niranjanbabu.mv@cognizant.com
+   username: $BLUEMIX_USER
    password: $BLUEMIX_PASS
-   organization: $BLUEMIX_ORGANIZATION
+   organization: $BLUEMIX_ORG
    space: $BLUEMIX_SPACE
    # manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
    app_name: docker-react-new                # (optional)
