@@ -6,12 +6,14 @@ before_install:
 script:
     - docker run niranjan/docker-react npm run test -- --coverage
 deploy:
+        edge: true
         provider: bluemixcloudfoundry
-        skip_cleanup: true
-        manifest: manifest.yml
         username: $BLUEMIX_USER
         password: $BLUEMIX_PASSWORD
         organization: $BLUEMIX_ORGANIZATION
         space: $BLUEMIX_SPACE
+        manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
+        app_name: docker-react-new                # (optional)
+        region: us-south                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
         on:
           branch: master
