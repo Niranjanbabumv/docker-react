@@ -14,7 +14,7 @@ deploy:
    space: $BLUEMIX_SPACE
    # manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
    app_name: docker-react-new                # (optional)
-   #region: us-south                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
-   api: https://cloud.ibm.com      # (optional)  Overrides region setting if specified for Bluemix local installations.
+   region: $BLUEMIX_REGION                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
+   api: $BLUEMIX_API      # (optional)  Overrides region setting if specified for Bluemix local installations.
    on:
      branch: master
