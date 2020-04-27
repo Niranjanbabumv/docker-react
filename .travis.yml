@@ -11,7 +11,7 @@ deploy:
    username: $BLUEMIX_USER
    password: $BLUEMIX_PASS
    organization: CTS IPM
-   space: $BLUEMIX_SPACE
+   space: CTS IPM Cloud Development 
    # manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
    app_name: docker-react-new                # (optional)
    #region: $BLUEMIX_REGION                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
