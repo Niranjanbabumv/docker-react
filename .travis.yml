@@ -8,13 +8,13 @@ script:
 deploy:
    edge: true
    provider: bluemixcloudfoundry
-   username: $BLUEMIX_USER
+   username: niranjanbabu.mv@cognizant.com
    password: $BLUEMIX_PASS
    organization: $BLUEMIX_ORGANIZATION
    space: $BLUEMIX_SPACE
    # manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
    app_name: docker-react-new                # (optional)
    #region: us-south                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
-   #api: https://api.us-south.cf.cloud.ibm.com      # (optional)  Overrides region setting if specified for Bluemix local installations.
+   # api: https://api.us-south.cf.cloud.ibm.com      # (optional)  Overrides region setting if specified for Bluemix local installations.
    on:
      branch: master
