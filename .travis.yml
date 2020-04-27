@@ -10,8 +10,8 @@ deploy:
    provider: cloudfoundry
    username: $BLUEMIX_USER
    password: $BLUEMIX_PASS
-   organization: "CTS IPM"
-   space: "CTS IPM Cloud Development"
+   organization: $BLUEMIX_ORG 
+   space: $BLUEMIX_SPACE
    # manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
    app_name: docker-react-new                # (optional)
    #region: $BLUEMIX_REGION                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
