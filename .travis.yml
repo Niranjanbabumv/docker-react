@@ -8,11 +8,10 @@ script:
 deploy:
         edge: true
         provider: bluemixcloudfoundry
-        username: niranjanbabu.mv@cognizant.com
-        password: Kanipaka*143
-        organization: CTS IPM
-        space:  CTS IPM Cloud Development 
-        manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
+        username: $BLUEMIX_USER
+        password: $BLUEMIX_PASS
+        organization: $BLUEMIX_ORGANIZATION 
+        space: $BLUEMIX_SPACE  
         app_name: docker-react-new                # (optional)
         on:
           branch: master
