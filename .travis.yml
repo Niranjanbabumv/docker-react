@@ -7,7 +7,7 @@ script:
     - docker run niranjan/docker-react npm run test -- --coverage
 deploy:
    edge: true
-   provider: bluemixcloudfoundry
+   provider: cloudfoundry
    username: $BLUEMIX_USER
    password: $BLUEMIX_PASS
    organization: $BLUEMIX_ORG
