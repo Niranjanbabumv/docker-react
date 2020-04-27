@@ -14,6 +14,5 @@ deploy:
         space: $BLUEMIX_SPACE
         manifest: manifest.yml          # (optional)  Defaults to manifest.yml.
         app_name: docker-react-new                # (optional)
-        region: us-south                        # (optional)  [ng, eu-gb , au-syd] Defaults to US South region (ng).
         on:
           branch: master
